@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 import axios from 'axios'
-import PubSub from 'pubsub-js'
 class Search extends Component {
     search = () => {
         const {value} = this.keyWordElement
         axios.get(`https://api.github.com/search/users?q=${value}`).then(res=>{
-            PubSub.publishSync('updateUser',res.data.items)
+            // eslint-disable-next-line react/no-direct-mutation-state
+            this.props.getUser(res.data.items)
         }).catch(err=>{
             console.log(err.data)
         })
