@@ -1,20 +1,17 @@
 import React, {Component} from 'react';
 import Item from '../Item'
-import './index.css'
-
 class List extends Component {
     render() {
-        const {todos} = this.props
+        const {users} = this.props
         return (
-            <div>
-                <ul className="todo-main">
-                    {
-                        todos.map(todo => {
-                            return <Item key={todo.id} todo={todo}></Item>
-                        })
-                    }
-                </ul>
+            <div className="row">
+                {
+                    users.map(item=>{
+                        return <Item avatar={item.avatar_url} login={item.login} html_url={item.html_url} key={item.id}></Item>
+                    })
+                }
             </div>
+
         );
     }
 }

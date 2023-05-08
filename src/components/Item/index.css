@@ -1,37 +1,24 @@
-
-/*item*/
-li {
-    list-style: none;
-    height: 36px;
-    line-height: 36px;
-    padding: 0 5px;
-    border-bottom: 1px solid #ddd;
+.album {
+    min-height: 50rem; /* Can be removed; just added for demo purposes */
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background-color: #f7f7f7;
 }
 
-li label {
+.card {
     float: left;
-    cursor: pointer;
-}
-li:hover {
-    /*background-color: red;*/
-}
-li label li input {
-    vertical-align: middle;
-    margin-right: 6px;
-    position: relative;
-    top: -1px;
+    width: 33.333%;
+    padding: .75rem;
+    margin-bottom: 2rem;
+    border: 1px solid #efefef;
+    text-align: center;
 }
 
-li button {
-    float: right;
-    display: none;
-    margin-top: 3px;
+.card > img {
+    margin-bottom: .75rem;
+    border-radius: 100px;
 }
 
-li:before {
-    content: initial;
-}
-
-li:last-child {
-    border-bottom: none;
+.card-text {
+    font-size: 85%;
 }
