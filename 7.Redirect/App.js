@@ -17,7 +17,7 @@ class App extends Component {
                     <div className="col-xs-6">
                         <Switch>
                             <Route path='/about' component={About}></Route>
-                            <Route path='/home' component={Home}></Route>
+                            <Route path='/home' exact component={Home}></Route>
                             <Redirect to='/home'></Redirect>
                         </Switch>
 

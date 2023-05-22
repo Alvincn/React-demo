@@ -4,7 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 // 引入 App
 import App from './App';
-import {BrowserRouter, HashRouter} from "react-router-dom";
+import {BrowserRouter} from "react-router-dom";
 // 引入性能检测，没什么用
 // import reportWebVitals from './reportWebVitals';
 
