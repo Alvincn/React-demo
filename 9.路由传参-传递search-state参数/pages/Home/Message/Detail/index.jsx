@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import qs from 'querystring'
 
 const DetailData = [
     {id: '001', title: 'message001', content: 'message content001'},
@@ -9,12 +8,7 @@ const DetailData = [
 
 class Detail extends Component {
     render() {
-        // 接收 params 参数
         const {id} = this.props.match.params
-        // 传递 search 参数
-        // const {id} = qs.parse(this.props.location.search.slice(1))
-        // 传递 state 参数
-        // const {id} = this.props.location.state
         const findResult = DetailData.find((detailObj) => {
             return detailObj.id === id
         })
